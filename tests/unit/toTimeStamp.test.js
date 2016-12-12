@@ -11,10 +11,13 @@ describe('toTimeStamp', () => {
     it('returns correct time stamp when passed the NLD of "December 9, 2015"', () => {
         expect(isTimeValue("December 9, 2015")).to.equal(1449637200)
     })
-    it('returns correct time stamp when passed the NLD of "December 9, 2014"', () => {
-        expect(isTimeValue("December 9, 2014")).to.equal(1418101200)
+    it('returns "Not an NLD" when passed a date with no comma after day of month', () => {
+        expect(isTimeValue("December 9 2015")).to.equal("Not an NLD")
+    })    
+    it('returns "Not an NLD" when passed a timestamp', () => {
+        expect(isTimeValue("1418101200")).to.equal("Not an NLD")
     })
-    it('returns correct time stamp when passed the NLD of the Unix Epoch', () => {
-        expect(isTimeValue("January 1, 1970")).to.equal(18000)
+    it('returns "Not an NLD" when passed a random string', () => {
+        expect(isNatLangDate('Random String')).to.equal("Not an NLD")
     })
 })
