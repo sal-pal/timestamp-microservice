@@ -1,11 +1,11 @@
 var chai = require('chai')
 var expect = chai.expect
-var isTimeValue = require('../../src/isTimeValue.js')
+var isTimeValue = require('../../src/isTimeStamp.js')
 
 
 
-describe('isTimeValue', () => {
-    it('returns true when passed time value', () => {
+describe('isTimeStamp', () => {
+    it('returns true when passed time stamp', () => {
         expect(isTimeValue(1481163870249)).to.equal(true)
     })
     it('returns false when passed natural language date', () => {
