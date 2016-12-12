@@ -3,16 +3,11 @@
 **/
 
 module.exports = (input) => {
-    if (input === 'string') {
-        input = parseInt(input)
-        if (typeof input === 'number') {
-            return true
-        }
-        else {
-            return false
-        }
+    var value = parseInt(input)
+    if (isNaN(value)) {
+        return false
     }
-    if (typeof input === 'number') {
+    else if (typeof value === 'number') {
         return true
     }
     else {return false}
