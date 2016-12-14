@@ -5,9 +5,10 @@
 module.exports = (input) => {
     var moment = require('moment')
     var isNatLangDate = require('./isNatLangDate.js')
-    if (isNatLangDate(input) === true) {
+    if (isNatLangDate(input)) {
         var momentObj = moment(input)
-        return momentObj.unix().toString()
+        var timestamp = momentObj.unix().toString()
+        return timestamp
     }
     else {return 'Not an NLD'}
 }

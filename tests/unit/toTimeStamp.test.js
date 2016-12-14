@@ -6,10 +6,10 @@ var toTimeStamp = require('../../src/toTimeStamp.js')
 
 describe('toTimeStamp', () => {
     it('returns correct time stamp when passed the NLD of "December 9, 2016"', () => {
-        expect(toTimeStamp("December 9, 2016")).to.equal(1481259600)
+        expect(toTimeStamp("December 9, 2016")).to.equal("1481259600")
     })
     it('returns correct time stamp when passed the NLD of "December 9, 2015"', () => {
-        expect(toTimeStamp("December 9, 2015")).to.equal(1449637200)
+        expect(toTimeStamp("December 9, 2015")).to.equal("1449637200")
     })
     it('returns "Not an NLD" when passed a date with no comma after day of month', () => {
         expect(toTimeStamp("December 9 2015")).to.equal("Not an NLD")
