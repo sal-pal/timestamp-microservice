@@ -1,15 +1,3 @@
-/**
-        Server has only one route
-            -Will pass request data to timestamp-microservice
-            -Want api to write JSON to res
-        -Server has only one test:
-            +Checking that res has correct object written to resp
-        -Research how to test that:
-        
-        -How to test that our server works.
-            +Will export our app object to test it
-**/
-
 var request = require('supertest')
 var express = require('express')
 var timestampMicroServ = require('./src/integration.js')
