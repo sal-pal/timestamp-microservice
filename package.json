@@ -2,6 +2,9 @@
   "name": "timestamp-microservice",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "6.4.0"
+  },
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha ./tests/bootstrap.test.js ./tests/unit/**/*.test.js",
