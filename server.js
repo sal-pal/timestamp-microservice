@@ -9,4 +9,4 @@ app.get("/:input", (req, res) => {
 })
 
 //Find out what port will be listened on
-app.listen()
+app.listen(80)
