@@ -6,6 +6,15 @@ class App extends Component {
       super()
       this.state = {input: undefined}
   }
+    
+  handleSubmit() {
+    //Create correct url
+    const url = "https://dry-river-67944.herokuapp.com/" + this.state.input
+    fetch(url)
+      .then(response => response.json())
+      .then(json => console.log(json))
+      .catch(error => console.log(error))
+  }
 
   render() {
     return (
@@ -18,7 +27,7 @@ class App extends Component {
         </p>
         <form>    
           <input type="text" onChange={(event) => this.setState({input: event.target.value})}/> <br/>
-          <input type="submit" onClick={() => console.log(this.state.input)}/>
+          <input type="submit" onSubmit={() => this.handleSubmit()}/>
         </form>
       </div>
     );
