@@ -1,19 +1,15 @@
 .App {
-  text-align: center;
-
+    text-align: center;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 16%;
 }
 
-
-
-.App-header {
-
+.button {
+    margin-top: 1%;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input {
+    text-align: center;
 }
