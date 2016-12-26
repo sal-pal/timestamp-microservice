@@ -4,7 +4,7 @@ module.exports = {
 
   output: {
     filename: "app.js",
-    path: __dirname
+    path: __dirname + '/assets'
   },
   module: {
     loaders: [

@@ -12,5 +12,8 @@ app.get("/:input", (req, res) => {
     res.end(convertedData)
 })
 
+//Serve react app when requested the index page
+app.get("/", express.static(path.join(__dirname, 'assets')))
+
 //Find out what port will be listened on
 app.listen(process.env.PORT)
