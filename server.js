@@ -1,5 +1,6 @@
 var timestampMicroServ = require('./src/integration.js')
 var express = require("express")
+var path = require("path")
 
 var app = express()
 
@@ -13,7 +14,7 @@ app.get("/:input", (req, res) => {
 })
 
 //Serve react app when requested the index page
-app.use("/", express.static(path.join(__dirname, '/TMS-Front-End/assets')))
+app.get("/", express.static(path.join(__dirname, '/TMS-Front-End/assets')))
 
 //Find out what port will be listened on
 app.listen(process.env.PORT)
