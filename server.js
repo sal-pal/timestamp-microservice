@@ -13,7 +13,7 @@ app.get("/:input", (req, res) => {
 })
 
 //Serve react app when requested the index page
-app.get("/", express.static(path.join(__dirname, 'assets')))
+app.get("/", express.static(path.join(__dirname, 'TMS-Front-End/assets')))
 
 //Find out what port will be listened on
 app.listen(process.env.PORT)
