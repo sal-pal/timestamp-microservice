@@ -23,6 +23,4 @@
     })
 
     //Find out what port will be listened on
-    app.listen(3000)
-    
-    //process.env.PORT
+    app.listen(process.env.PORT)
