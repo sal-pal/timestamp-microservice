@@ -4,7 +4,7 @@
 
 module.exports = (input) => {
     var moment = require('moment')
-    var date = moment(input)
+    var date = moment(input, "MMMM D, YYYY")
     if (date.isValid()) {
         var natLangDate = date.format("MMMM D, YYYY")
         if (natLangDate === input) {
